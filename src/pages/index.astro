@@ -1,0 +1,15 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Home from '../components/Home.jsx';
+
+// All home page copy lives in src/content/site/home.yaml
+const entry = await getEntry('site', 'home');
+const copy = entry.data;
+---
+<BaseLayout
+  title={`${copy.hero.name} — Nonlinear Dynamics and Signal Processing`}
+  description={copy.hero.tagline}
+>
+  <Home copy={copy} client:load />
+</BaseLayout>

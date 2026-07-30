@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const all = await getCollection('projects');
+  const en = all.filter((p) => p.data.language === 'en');
+  return en.map((entry) => ({
+    params: { slug: entry.data.permalink },
+    props: { entry, pt: all.find((p) => p.data.language === 'pt' && p.data.permalink === entry.data.permalink) },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const d = entry.data;
+---
+<BaseLayout title={`${d.title} — Nonlinear Dynamics and Signal Processing Group`}>
+  <main class="max-w-4xl mx-auto px-6 lg:px-10 py-20">
+    <a href="/projects/" class="mono text-[11px] uppercase tracking-[0.22em] text-goldDim hover:text-gold">
+      ← All projects
+    </a>
+
+    <div class="flex items-baseline gap-3 flex-wrap mt-8">
+      <span class="mono text-[10px] tracking-[0.2em] uppercase text-navy bg-gold/15 border border-gold/40 px-2 py-1 font-semibold">
+        {d.code}
+      </span>
+      {d.pillars.map((p) => (
+        <span class="mono text-[10px] tracking-[0.22em] text-goldDim">{p}</span>
+      ))}
+    </div>
+
+    <h1 class="display text-4xl md:text-5xl text-navy leading-[1.08] mt-5">{d.title}</h1>
+
+    <div class="mt-6 flex flex-wrap gap-x-8 gap-y-2 border-t border-b border-navy/10 py-4">
+      <p class="text-[13px] text-muted">
+        <span class="mono uppercase tracking-[0.16em] text-[10px] text-goldDim">Areas</span>
+        {' · '}{d.areas.join(' · ')}
+      </p>
+      {d.methods.length > 0 && (
+        <p class="text-[13px] text-muted">
+          <span class="mono uppercase tracking-[0.16em] text-[10px] text-goldDim">Methods</span>
+          {' · '}{d.methods.join(' · ')}
+        </p>
+      )}
+    </div>
+
+    <article class="prose-varanis mt-10">
+      <Content />
+    </article>
+
+    <p class="mono text-[11px] text-muted mt-16 pt-6 border-t border-navy/10">
+      Last updated {d.updated.toISOString().slice(0, 10)}
+    </p>
+  </main>
+</BaseLayout>

@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --mainblue: #0A2240;
+  --navy: #061730;
+  --gold: #C8A951;
+  --gold-dim: #8E763B;
+  --softgray: #EDF2F7;
+  --ink: #0F172A;
+  --muted: #475569;
+  --line: #1f3559;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Spectral', Georgia, serif; color: var(--ink); }
+.display { font-family: 'Fraunces', 'Bodoni 72', Didot, serif; letter-spacing: -0.02em; }
+.mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+
+.underline-gold {
+  background-image: linear-gradient(var(--gold), var(--gold));
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+
+/* Prose defaults for markdown-rendered project pages */
+.prose-varanis h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.75rem;
+  color: var(--mainblue);
+  margin-top: 2.75rem;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.02em;
+}
+.prose-varanis p { margin-bottom: 1.15rem; line-height: 1.75; color: #1e293b; }
+.prose-varanis ul { margin: 0 0 1.15rem 1.25rem; list-style: disc; }
+.prose-varanis li { margin-bottom: 0.5rem; line-height: 1.7; }
+.prose-varanis strong { color: var(--mainblue); font-weight: 600; }
+.prose-varanis em { font-style: italic; }
+.prose-varanis a { color: var(--gold-dim); text-decoration: underline; }
+.prose-varanis a:hover { color: var(--gold); }

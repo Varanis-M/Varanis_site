@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const all = await getCollection('projects');
+const projects = all
+  .filter((p) => p.data.language === 'en')
+  .sort((a, b) => a.data.code.localeCompare(b.data.code));
+---
+<BaseLayout title="Active Projects — Nonlinear Dynamics and Signal Processing Group">
+  <main class="max-w-5xl mx-auto px-6 lg:px-10 py-20">
+    <a href="/" class="mono text-[11px] uppercase tracking-[0.22em] text-goldDim hover:text-gold">
+      ← Home
+    </a>
+
+    <p class="mono text-[11px] uppercase tracking-[0.3em] text-goldDim mt-8 mb-3">Projects</p>
+    <h1 class="display text-4xl md:text-5xl text-navy">Active Projects</h1>
+    <p class="mt-4 text-muted max-w-2xl leading-relaxed">
+      Each project is an ongoing piece of work, with collaborators and a roadmap.
+    </p>
+
+    <div class="mt-14 border-t border-navy/10">
+      {projects.map((p) => (
+        <article class="border-b border-navy/10 py-8">
+          <div class="flex items-baseline gap-3 flex-wrap">
+            <span class="mono text-[10px] tracking-[0.2em] uppercase text-navy bg-gold/15 border border-gold/40 px-2 py-1 font-semibold">
+              {p.data.code}
+            </span>
+            {p.data.pillars.map((pl) => (
+              <span class="mono text-[10px] tracking-[0.2em] text-goldDim">{pl}</span>
+            ))}
+          </div>
+          <h2 class="display text-2xl text-navy mt-4 leading-snug">
+            <a href={`/projects/${p.data.permalink}/`} class="hover:text-goldDim transition-colors">
+              {p.data.title}
+            </a>
+          </h2>
+          <p class="text-[14px] text-muted mt-2">{p.data.areas.join(' · ')}</p>
+          <a
+            href={`/projects/${p.data.permalink}/`}
+            class="inline-block mono text-[11px] uppercase tracking-[0.2em] text-navy hover:text-gold mt-4"
+          >
+            Read the project page →
+          </a>
+        </article>
+      ))}
+    </div>
+  </main>
+</BaseLayout>

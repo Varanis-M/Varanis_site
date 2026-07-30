@@ -1,0 +1,370 @@
+# =============================================================================
+# HOME PAGE CONTENT — varanis.cc
+# -----------------------------------------------------------------------------
+# Everything written on the home page lives in this file. Edit here; no JSX.
+# The build validates this file against src/content/config.ts and FAILS LOUDLY
+# if a required field is missing or a value is not allowed.
+#
+# HOW TO EDIT PROSE
+#   Use the `|` block marker and indent the text. Line breaks inside the block
+#   are collapsed into normal paragraph flow.
+#
+# GOVERNANCE (enforced by the schema)
+#   - research_lines: only tags P1-P5.
+#   - No manuscript status anywhere (in-preparation / submitted / under-review).
+#   - No internal project codenames. Public technical names only.
+#   - Group composition: level-based language, never fixed headcounts.
+#   - members[].photo must match a key in src/photos.js
+# =============================================================================
+
+nav:
+  - { label: "About",        href: "#about" }
+  - { label: "Research",     href: "#research" }
+  - { label: "Group",        href: "#group" }
+  - { label: "Projects",     href: "#projects" }
+  - { label: "Publications", href: "#publications" }
+  - { label: "Contact",      href: "#contact" }
+
+profiles:
+  - { label: "ORCID",          icon: "orcid",        href: "https://orcid.org/0000-0001-8932-1035" }
+  - { label: "ResearchGate",   icon: "researchgate", href: "https://www.researchgate.net/profile/Marcus_Varanis" }
+  - { label: "Google Scholar", icon: "scholar",      href: "https://scholar.google.com.br/citations?user=EFLbPQMAAAAJ" }
+  - { label: "Lattes",         icon: "lattes",       href: "http://lattes.cnpq.br/1326436583744116" }
+  - { label: "LinkedIn",       icon: "linkedin",     href: "https://www.linkedin.com/in/marcusvaranis/" }
+
+# ---------------------------------------------------------------- 00 · HERO --
+hero:
+  eyebrow: "Associate Professor · INFI/UFMS"
+  name: "Marcus Varanis"
+  tagline: "Modeling complex systems beyond linearity and stationarity."
+  body: |
+    I am an associate professor at the Institute of Physics (INFI/UFMS) and lead the
+    Nonlinear Dynamics and Signal Processing Group. My work combines analytical
+    modeling, computational experiments, advanced signal analysis, and scientific
+    machine learning to investigate nonlinear mechanical and biomedical systems.
+  # The group name inside `body` is highlighted in gold automatically.
+  highlight: "Nonlinear Dynamics and Signal Processing Group"
+  cta_primary: { label: "Explore the research", href: "#research" }
+  cta_secondary: { label: "Get in touch", href: "#contact" }
+  equation: "ẍ + δẋ + αx + βx³ = γ cos(ωt)"
+
+# --------------------------------------------------------------- 01 · ABOUT --
+about:
+  eyebrow: "01 — About"
+  headline: "A physicist working at the intersection of theory, experiment, and computation."
+  portrait_caption: "Group Leader"
+  paragraphs:
+    - |
+      I am an associate professor at the Institute of Physics (INFI), Universidade
+      Federal de Mato Grosso do Sul (UFMS), in Campo Grande, Brazil. I earned a D.Sc.
+      in Mechanical Engineering from the School of Mechanical Engineering at
+      Universidade Estadual de Campinas (UNICAMP) and completed postdoctoral research
+      in the Department of Mechanical Engineering at UNESP Bauru.
+    - |
+      I am affiliated with the Graduate Program in Materials Science (PPGCM/INFI),
+      where I teach undergraduate and graduate courses, advise undergraduate
+      researchers and master's and doctoral students, and lead the Nonlinear Dynamics
+      and Signal Processing Group.
+    - |
+      My research and teaching encompass nonlinear dynamics and vibrations,
+      time-frequency analysis, fractional-order systems, scientific machine learning,
+      and biomedical modeling. Within time-frequency analysis, my work includes
+      wavelet packet methods, the Hilbert-Huang transform, synchrosqueezing, and
+      synchroextracting transforms.
+    - |
+      I also maintain active collaborations with research groups in Brazil and abroad.
+
+# ------------------------------------------------------------ 02 · RESEARCH --
+research:
+  eyebrow: "02 — Research"
+  headline: "Five interlocking lines, one question."
+  question: |
+    How do real systems behave when linearity, stationarity, and isolation cease to
+    be valid assumptions, and how can we measure, model, and predict that behavior?
+  link: { label: "Explore the full research portfolio →", href: "#research" }
+  lines:
+    - tag: "P1"
+      title: "Nonlinear Dynamics & Mechanical Vibrations"
+      body: |
+        Nonlinear oscillators, nonideal excitation and the Sommerfeld effect,
+        vibro-impact dynamics, synchronization, fractional-order damping and memory
+        effects, and mechanical energy harvesting.
+    - tag: "P2"
+      title: "Nonstationary Signal Processing"
+      body: |
+        Wavelet and wavelet packet analysis, synchrosqueezing and synchroextracting
+        transforms, variational mode decomposition, and energy-entropy signatures for
+        nonlinear and nonstationary signals.
+    - tag: "P3"
+      title: "Scientific Machine Learning"
+      body: |
+        Hamiltonian and Lagrangian Neural Networks, physics-informed learning, and
+        multimodal deep learning for reconstructing and classifying dynamical regimes,
+        including chaotic and hyperchaotic behavior.
+    - tag: "P4"
+      title: "Computational Biomedical Modeling"
+      body: |
+        Nonlinear models of chest wall mechanics and cardiopulmonary dynamics during
+        CPR, nonlinear Windkessel hemodynamics, and coupled Van der Pol oscillators
+        for cardiac rhythm modeling.
+    - tag: "P5"
+      title: "Teaching & Research Training"
+      body: |
+        Physically grounded computational frameworks and Feynman-inspired teaching
+        materials for nonlinear dynamics, computational modeling, and simulation,
+        supporting undergraduate research (Iniciação Científica) and master's and
+        doctoral training.
+
+# --------------------------------------------------------------- 03 · GROUP --
+group:
+  eyebrow: "03 — Group"
+  banner: "/group-banner.svg"
+  banner_alt: "Nonlinear Dynamics and Signal Processing Group — Institute of Physics, Federal University of Mato Grosso do Sul"
+  intro: |
+    A research collective at INFI/UFMS bridging analytical theory, computational
+    experiments and physical instrumentation. The group brings together doctoral and
+    graduate researchers alongside undergraduate (Iniciação Científica) students,
+    working across scientific machine learning, fractional and nonlinear dynamics,
+    watch-mechanism modelling and energy harvesting.
+
+  # `lead: true` puts a thin gold ring on the card. Lead researchers come first.
+  # `photo` must match a key in src/photos.js. Omit it to show initials instead.
+  members:
+    - { photo: "ribas",    name: "João Vitor de Oliveira Ribas", role: "PhD Candidate · PPGCM/INFI", topic: "Analysis and Modeling of Metamaterials using Hamiltonian and Lagrangian Neural Networks · SciML for dynamical systems.", lead: true, badge: "PhD" }
+    - { photo: "barbara",  name: "Barbara Oliveira",             role: "Master's student",           topic: "Coupled 0D–1D cardiovascular modelling · wave-propagation effects and nonlinear stent models", lead: true }
+    - { photo: "rodrigo",  name: "Rodrigo Carvalho",             role: "Graduate Researcher",        topic: "Metamaterials Scientific Machine Learning", lead: true }
+    - { photo: "mateus",   name: "Mateus Silva",                 role: "Graduate Researcher",        topic: "Fractional-Order Systems · memory-effect dynamics" }
+    - { photo: "antonio",  name: "Antonio",                      role: "Undergraduate",              topic: "Symbolic Hamiltonian formulation" }
+    - { photo: "nickolas", name: "Nickolas",                     role: "Undergraduate",              topic: "Physics-Informed Neural Networks" }
+    - { photo: "pablo",    name: "Pablo",                        role: "Undergraduate",              topic: "Symbolic Hamiltonian formulation" }
+    - { photo: "dilson",   name: "Dilson",                       role: "Undergraduate",              topic: "Coupled 0D–1D cardiovascular modelling" }
+    - { photo: "livia",    name: "Lívia",                        role: "Undergraduate",              topic: "Mechanical Vibrations Instrumentation" }
+    - { photo: "paulo",    name: "Paulo",                        role: "Undergraduate",              topic: "Energy Harvesting · modelling and simulation" }
+    - { photo: "dutka",    name: "João Dutka",                   role: "Undergraduate",              topic: "Numerical analysis of the dynamics of the clock mechanism." }
+    - { photo: "diogo",    name: "Diogo",                        role: "Undergraduate",              topic: "Symbolic analysis of the dynamics of the clock mechanism." }
+    - { photo: "daniela",  name: "Daniela",                      role: "Undergraduate",              topic: "Signal processing and time-frequency analysis of LIGO signals." }
+    - { photo: "eduardo",  name: "Eduardo Venturim",             role: "Undergraduate",              topic: "Nonlinear flutter modelling" }
+
+  open_call:
+    eyebrow: "Open Call"
+    headline: |
+      Master's and undergraduate research positions are available in scientific
+      machine learning, signal processing, and nonlinear dynamics.
+    body: "Applications from Brazil and abroad are welcome."
+    cta: { label: "Apply", href: "#contact" }
+
+# ------------------------------------------------------------ 04 · PROJECTS --
+projects:
+  eyebrow: "04 — Active Projects"
+  headline: "Living artifacts, not a list of papers."
+  intro: "Each project below is a real, named, ongoing piece of work — with collaborators and a roadmap."
+  items:
+    - code: "CPR"
+      title: "Nonlinear Chest Wall and Cardiopulmonary Modeling for CPR"
+      href: "/projects/cpr-cardiopulmonary-modeling/"
+      description: |
+        A coupled computational model of nonlinear viscoelastic chest wall mechanics
+        and cardiopulmonary circulation during CPR.
+      meta:
+        - { label: "Areas", value: "Biomedical modeling · Nonlinear dynamics" }
+        - { label: "Collaborators", value: "Prof. C. Nataraj · Villanova Center for Analytics of Dynamic Systems (VCADS), Villanova University" }
+    - code: "PQD"
+      title: "Power Quality Disturbance Modeling and Classification"
+      href: "/projects/power-quality-disturbance-classification/"
+      description: |
+        A signal processing and scientific machine learning framework for representing
+        and classifying power quality disturbance signals.
+      meta:
+        - { label: "Areas", value: "Signal processing · Scientific machine learning" }
+        - { label: "Methods", value: "IEEE 1159-2019 · Wavelet packet analysis · Entropy features · FT-Transformer" }
+        - { label: "Team", value: "Nonlinear Dynamics and Signal Processing Group" }
+    - code: "SciML"
+      title: "Scientific Machine Learning for Nonlinear Systems"
+      href: "/projects/scientific-machine-learning-nonlinear-systems/"
+      description: |
+        Hamiltonian and Lagrangian Neural Networks for the analysis of nonlinear
+        dynamical systems and applications in materials science.
+      meta:
+        - { label: "Scope", value: "Research · Teaching" }
+        - { label: "Methods", value: "Neural ODEs · HNNs and LNNs · PyTorch · Google Colab" }
+        - { label: "Collaborators", value: "Prof. Américo Cunha Jr. (LNCC, Brazil) · Prof. J. M. Balthazar (UNESP, Brazil)" }
+    - code: "NLD"
+      title: "Nonlinear Dynamical Systems"
+      href: "/projects/nonlinear-dynamical-systems/"
+      description: |
+        Analytical, computational, and experimental studies of nonlinear systems in
+        mechanics and engineering, with emphasis on oscillations, stability,
+        bifurcations, chaos, synchronization, vibro-impact, nonideal excitation,
+        fractional-order effects, and energy harvesting.
+      meta:
+        - { label: "Areas", value: "Nonlinear dynamics · Mechanical vibrations · Applied mechanics" }
+        - { label: "Collaborators", value: "J. M. Balthazar (UNESP, Brazil); Grzegorz Litak (Lublin University of Technology, Poland); Américo Cunha Jr. (LNCC, Brazil); Angelo Tusset (UTFPR, Brazil); Clivaldo Oliveira (UFGD, Brazil)" }
+
+# -------------------------------------------------------- 05 · PUBLICATIONS --
+publications:
+  eyebrow: "05 — Publications"
+  headline: "A research programme, not a chronology."
+  intro: |
+    Selected work organized by research line. First-author contributions are marked;
+    the complete record is available through the profiles below.
+  flagship_note: "Gold rule marks first-author contributions."
+  links:
+    - { label: "Scholar",      href: "https://scholar.google.com.br/citations?user=EFLbPQMAAAAJ" }
+    - { label: "Lattes",       href: "http://lattes.cnpq.br/1326436583744116" }
+    - { label: "ResearchGate", href: "https://www.researchgate.net/profile/Marcus_Varanis" }
+  stats:
+    - { n: "30", label: "Journal articles" }
+    - { n: "10", label: "Book chapters" }
+    - { n: "43", label: "Conference papers" }
+    - { n: "2",  label: "Edited / co-authored books" }
+
+  # `flagship: true` = first-author work (gold rule on the left edge).
+  # `type` is free text, e.g. "Journal", "Book chapter", "Journal · In press".
+  groups:
+    - tag: "P1"
+      line: "Nonlinear Dynamics & Mechanical Vibrations"
+      items:
+        - year: "2019"
+          venue: "Journal of the Franklin Institute"
+          type: "Journal"
+          flagship: true
+          title: "Dynamics and control of periodic and non-periodic behavior of Duffing vibrating system with fractional damping and excited by a non-ideal motor"
+          authors: "Varanis · Tusset · Balthazar · Litak · Oliveira · Rocha · Nabarrete · Piccirillo"
+        - year: "2020"
+          venue: "J. Braz. Soc. Mech. Sci. Eng."
+          type: "Journal"
+          flagship: true
+          title: "Numerical and experimental investigation of the dynamic behavior of a cantilever beam driven by two non-ideal sources"
+          authors: "Varanis · Mereles · Silva · Barghouthi · Balthazar · Lopes · Bavastri"
+        - year: "2019"
+          venue: "Latin American Journal of Solids and Structures"
+          type: "Journal"
+          flagship: true
+          title: "Modeling and experimental validation of two adjacent portal frame structures subjected to vibro-impact"
+          authors: "Varanis · Mereles · Silva · Balthazar · Tusset · Oliveira"
+        - year: "2024"
+          venue: "J. Braz. Soc. Mech. Sci. Eng."
+          type: "Journal"
+          title: "Performance analysis of a nonlinear energy harvester with subharmonic responses based on discrete Meyer wavelet filtering"
+          authors: "Ribeiro · Varanis · Tusset · Machado · Litak · Balthazar"
+        - year: "2022"
+          venue: "J. Braz. Soc. Mech. Sci. Eng."
+          type: "Journal"
+          title: "A new approach to suppressing the Sommerfeld effect in vibrating structures"
+          authors: "Brogin · Bueno · Santos · Varanis"
+
+    - tag: "P2"
+      line: "Nonstationary Signal Processing"
+      items:
+        - year: "2021"
+          venue: "Brazilian Journal of Physics"
+          type: "Journal"
+          flagship: true
+          title: "A tutorial review on time-frequency analysis of non-stationary vibration signals with nonlinear dynamics applications"
+          authors: "Varanis · Silva · Balthazar · Pederiva"
+        - year: "2018"
+          venue: "Journal of Vibration and Control"
+          type: "Journal"
+          flagship: true
+          title: "Remarks on the Sommerfeld effect characterization in the wavelet domain"
+          authors: "Varanis · Balthazar · Silva · Mereles · Pederiva"
+        - year: "2018"
+          venue: "J. Braz. Soc. Mech. Sci. Eng."
+          type: "Journal"
+          flagship: true
+          title: "Statements on wavelet packet energy-entropy signatures and filter influence in fault diagnosis of induction motor in non-stationary operations"
+          authors: "Varanis · Pederiva"
+        - year: "2021"
+          venue: "Journal of Vibration Engineering & Technologies"
+          type: "Journal"
+          flagship: true
+          title: "A short note on synchrosqueezed transforms for resonant capture, Sommerfeld effect and nonlinear jump characterization in mechanical systems"
+          authors: "Varanis · Silva · Balthazar · Oliveira · Tusset · Bavastri"
+        - year: "2022"
+          venue: "Springer · Mechanisms and Machine Science, vol. 116"
+          type: "Book chapter"
+          flagship: true
+          title: "On the use of synchrosqueezing transform for chaos and nonlinear dynamics analysis in fractional-order systems"
+          authors: "Varanis · Oliveira · Ribeiro · Lenz · Tusset · Balthazar"
+
+    - tag: "P4"
+      line: "Computational Biomedical Modeling"
+      items:
+        - year: "2026"
+          venue: "Medical & Biological Engineering & Computing"
+          type: "Journal"
+          flagship: true
+          title: "A nonlinear Windkessel model for cardiovascular dynamics: variable compliance and pathological simulations"
+          authors: "Varanis · Ferraz · Longo · Balthazar"
+        - year: "2025"
+          venue: "Springer · Mechanisms and Machine Science, vol. 142"
+          type: "Book chapter"
+          flagship: true
+          title: "Recurrence analysis of nonlinear ECG signals modeled with coupled Van der Pol oscillators"
+          authors: "Varanis · Balthazar · Ribeiro · Tusset · de Oliveira · Lima · Silva"
+        - year: "2024"
+          venue: "Springer · NODYCON Proceedings, vol. 3"
+          type: "Book chapter"
+          flagship: true
+          title: "An overview on time-frequency effects of ECG signals using synchroextracting transform"
+          authors: "Varanis · Hemmati · Filipus · de Abreu · Balthazar · Nataraj"
+        - year: "2026"
+          venue: "Brazilian Journal of Physics"
+          type: "Journal"
+          title: "Influence of a non-ideal external force on the complexity of the basins of attraction of coupled Van der Pol oscillators"
+          authors: "Ribeiro · Silva · Balthazar · de Lima · Varanis · Tusset"
+        - year: "2025"
+          venue: "Journal of Vibration Testing and System Dynamics"
+          type: "Journal"
+          title: "On nonlinear and nonideal dynamics of three coupled Van der Pol oscillators applied to hemodynamics"
+          authors: "Silva · Ribeiro · Balthazar · Lima · Goncalves · Piccirilo · Varanis · Oliveira · Tusset"
+
+    - tag: "P5"
+      line: "Teaching & Research Training"
+      items:
+        - year: "2026"
+          venue: "European Journal of Physics"
+          type: "Journal · In press"
+          title: "Geometry to dynamics via B⊤B assembly: a Hamiltonian-first tutorial for a 6-DOF supported cube"
+          authors: "Ferraz · Longo · Varanis"
+          doi: "10.1088/1361-6404/ae9015"
+        - year: "2018"
+          venue: "J. Braz. Soc. Mech. Sci. Eng."
+          type: "Journal"
+          flagship: true
+          title: "MEMS accelerometers for mechanical vibrations analysis: a comprehensive review with applications"
+          authors: "Varanis · Silva · Mereles · Pederiva"
+        - year: "2018"
+          venue: "Revista Brasileira de Ensino de Física"
+          type: "Journal"
+          flagship: true
+          title: "On mechanical vibration analysis of a multi degree of freedom system based on Arduino and MEMS accelerometers"
+          authors: "Varanis · Silva · Mereles"
+        - year: "2020"
+          venue: "Revista Brasileira de Ensino de Física"
+          type: "Journal"
+          title: "An acquisition system framework for mechanical measurements with Python, Raspberry Pi and MEMS sensors"
+          authors: "Barbosa · Varanis · Delgado · Oliveira"
+        - year: "2024"
+          venue: "Revista Brasileira de Ensino de Física"
+          type: "Journal"
+          title: "Fractional dynamics: a comprehensive exploration of non-integer order systems"
+          authors: "de Abreu · Filipus · de Oliveira · Balthazar · Ribeiro · Tusset · Varanis"
+
+# ------------------------------------------------------------- 06 · CONTACT --
+contact:
+  eyebrow: "06 — Contact"
+  headline: "Get in touch"
+  body: |
+    I welcome inquiries from prospective graduate students and researchers interested
+    in collaboration, as well as invitations for seminars, lectures, and academic
+    events. Graduate supervision is available through PPGCM/INFI/UFMS.
+  email: "marcus.varanis@ufms.br"
+  location: "INFI · UFMS · Campo Grande, MS · Brazil"
+  profiles_label: "All profiles"
+  equation: "ẍ + δẋ + αx + βx³ = γ cos(ωt)"
+
+# -------------------------------------------------------------------- FOOTER --
+footer:
+  left: "© 2026 Marcus Varanis · varanis.cc"
+  right: "Built with Astro + React"
