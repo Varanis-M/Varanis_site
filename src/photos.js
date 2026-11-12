@@ -4,7 +4,7 @@ export const PHOTOS = {
   ribas: "/photos/ribas.jpg",
   livia: "/photos/livia.jpg",
   mateus: "/photos/mateus.jpg",
-  giovana: "/photos/giovana.png",
+  giovana: "/photos/giovana.jpg",
   dutka: "/photos/dutka.jpg",
   paulo: "/photos/paulo.jpg",
   diogo: "/photos/diogo.png",
