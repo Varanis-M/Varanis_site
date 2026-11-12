@@ -134,6 +134,7 @@ group:
     - { photo: "barbara",  name: "Barbara Oliveira",             role: "Master's student",           topic: "Coupled 0D–1D cardiovascular modelling · wave-propagation effects and nonlinear stent models", lead: true }
     - { photo: "rodrigo",  name: "Rodrigo Carvalho",             role: "Graduate Researcher",        topic: "Metamaterials Scientific Machine Learning", lead: true }
     - { photo: "mateus",   name: "Mateus Silva",                 role: "Graduate Researcher",        topic: "Fractional-Order Systems · memory-effect dynamics" }
+    - { photo: "giovana",  name: "Giovana Britto",               role: "Undergraduate",              topic: "Cardiovascular and CPR modelling" }
     - { photo: "antonio",  name: "Antonio",                      role: "Undergraduate",              topic: "Symbolic Hamiltonian formulation" }
     - { photo: "nickolas", name: "Nickolas",                     role: "Undergraduate",              topic: "Physics-Informed Neural Networks" }
     - { photo: "pablo",    name: "Pablo",                        role: "Undergraduate",              topic: "Symbolic Hamiltonian formulation" }
